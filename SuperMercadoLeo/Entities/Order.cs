@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SuperMercadoLeo.Entities
 {
     public class Order
     {
+        [Key]
         public int Id { get; set; }
         public Branch Id_branch { get; set; }
         public Employee Id_Employee { get; set; }

@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SuperMercadoLeo.Entities
 {
     public class Customer
     {
-        [KeyAttribute]
+        [Key]
         public int Id { get; set; }
 
-        [Display(Name ="Documento")]
+        [Display(Name = "Documento")]
         public string Document { get; set; }
 
-        [Display(Name ="Nombre")]
+        [Display(Name = "Nombre")]
+        [StringLength( 50, ErrorMessage = "El nombre no puede ser mayor a 50 caracteres" )]  
         public string Name { get; set; }
 
-        [Display(Name ="Apellido")]
+        [Display(Name = "Apellido")]
+        [StringLength( 50, ErrorMessage = "El nombre no puede ser mayor a 50 caracteres" )]  
         public string LastName { get; set; }
 
-        [Display(Name ="Estado")]
+        [Display(Name = "Estado")]
         public bool State { get; set; }
     }
 }
