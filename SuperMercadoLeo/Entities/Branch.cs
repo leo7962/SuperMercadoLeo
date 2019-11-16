@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace SuperMercadoLeo.Entities
 {
@@ -20,5 +21,7 @@ namespace SuperMercadoLeo.Entities
 
         [Display(Name = "Dirección")]
         public string Direction { get; set; }
+
+        public List<Employee> Employees {get; set;}
     }
 }

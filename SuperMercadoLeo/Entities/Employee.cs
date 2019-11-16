@@ -15,5 +15,8 @@ namespace SuperMercadoLeo.Entities
 
         [Display(Name = "Apellido")]
         public string LastName { get; set; }
+
+        public int BranchId {get; set;}
+        public Branch Branch { get; set; }
     }
 }
