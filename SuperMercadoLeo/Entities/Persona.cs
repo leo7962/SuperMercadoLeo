@@ -10,5 +10,6 @@ namespace SuperMercadoLeo.Entities
     {
         [Key]
         public int Id { get; set; }
+
     }
 }
