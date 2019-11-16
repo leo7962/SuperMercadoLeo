@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace SuperMercadoLeo.Entities
 {
@@ -7,21 +10,11 @@ namespace SuperMercadoLeo.Entities
     {
         [Key]
         public int Id { get; set; }
-
-        [Required]
-        [Display(Name = "Nombre")]
-        [StringLength( 50, ErrorMessage = "El nombre no puede ser mayor a 50 caracteres." )]  
+        [Display(Name = "Nombre de la Franquicia")]
         public string Name { get; set; }
 
-        [DataType(DataType.PhoneNumber)]
-        [Phone]
-        [Display(Name = "Telefono")]
-        [StringLength( 10, ErrorMessage = "el número de telefono no puede ser mayor a 10 digitos." )]  
-        public string Telephone { get; set; }
+        public int CityId { get; set; }
+        public City City { get; set; }
 
-        [Display(Name = "Dirección")]
-        public string Direction { get; set; }
-
-        public List<Employee> Employees {get; set;}
     }
 }
