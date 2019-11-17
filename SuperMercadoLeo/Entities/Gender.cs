@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SuperMercadoLeo.Entities
 {
-    public class Country
+    public class Gender
     {
         [Key] public int Id { get; set; }
-        [Display(Name = "Pais")] public string Name { get; set; }
-        public List<Department> Departments { get; set; }
+        [Display(Name = "Tipo de sexo")] public string Sex { get; set; }
+        public List<Person> Persons { get; set; }
     }
 }
