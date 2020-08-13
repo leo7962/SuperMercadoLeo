@@ -25,6 +25,6 @@ namespace SuperMercadoLeo.Entities
         public int GenderId { get; set; }
         public Gender Gender { get; set; }
         public Employee Employee { get; set; }
-        public Person Person { get; set; }
+        public Person Persons { get; set; }
     }
 }
