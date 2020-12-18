@@ -40,7 +40,10 @@ namespace SuperMercadoLeo
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            if (!env.IsDevelopment()) app.UseSpaStaticFiles();
+            if (!env.IsDevelopment())
+            {
+                app.UseSpaStaticFiles();
+            }
 
             app.UseRouting();
 
@@ -58,7 +61,10 @@ namespace SuperMercadoLeo
 
                 spa.Options.SourcePath = "ClientApp";
 
-                if (env.IsDevelopment()) spa.UseAngularCliServer("start");
+                if (env.IsDevelopment())
+                {
+                    spa.UseAngularCliServer("start");
+                }
             });
         }
     }
